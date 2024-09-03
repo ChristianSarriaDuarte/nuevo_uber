@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'uber-front',
+    loadChildren: () => import('./uber-front/uber-front.module').then( m => m.UberFrontPageModule)
   }
 ];
 

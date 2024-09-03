@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router'; // Asegúrate de tener el Router importado
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 export class RegisterPage {
   registerForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private router: Router) { // Asegúrate de inyectar el Router
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -19,8 +20,10 @@ export class RegisterPage {
 
   onRegister() {
     if (this.registerForm.valid) {
-      // Implement registration logic here
       console.log('Form submitted:', this.registerForm.value);
+      this.router.navigate(['/uber-front']); // Redirige a la página de uber-front
+    } else {
+      console.log('Form is invalid');
     }
   }
 }
