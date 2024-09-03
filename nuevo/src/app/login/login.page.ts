@@ -1,5 +1,6 @@
+// src/app/login/login.page.ts
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,19 +8,13 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage {
-
-  email: string = '';
-  password: string = '';
-
-  constructor(private navCtrl: NavController) {}
+  constructor(private router: Router) {}
 
   login() {
-    // Aquí puedes agregar la lógica de autenticación.
-    // Por ejemplo, validar los campos y redirigir al usuario.
-    console.log('Email:', this.email);
-    console.log('Password:', this.password);
+    // Aquí va la lógica para iniciar sesión
+  }
 
-    // Navegar a la página principal después del inicio de sesión exitoso.
-    this.navCtrl.navigateForward('/home');
+  navigateToRegister() {
+    this.router.navigate(['/register']); // Asegúrate de que la ruta '/register' esté definida en tu enrutador
   }
 }
