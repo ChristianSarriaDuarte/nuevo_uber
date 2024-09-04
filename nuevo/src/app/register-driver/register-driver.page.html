@@ -1,9 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Registrar Conductor</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
+<ion-content padding>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
@@ -19,11 +14,15 @@
     </ion-item>
     <ion-item>
       <ion-label position="floating">Tipo de Licencia</ion-label>
-      <ion-input formControlName="licenseType"></ion-input>
+      <ion-input formControlName="licenseType" placeholder="Ingrese el tipo de licencia"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating"></ion-label>
-      <ion-datetime formControlName="birthdate"></ion-datetime>
+      <ion-label position="floating">Fecha de Expiración de la Licencia</ion-label>
+      <ion-datetime formControlName="licenseExpiryDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox formControlName="confirm"></ion-checkbox>
+      <ion-label>Confirmo que tengo más de 18 años y poseo una licencia válida</ion-label>
     </ion-item>
     <ion-button expand="full" type="submit">Registrar</ion-button>
   </form>

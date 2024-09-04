@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsModule
 import { RegisterDriverPageModule } from './register-driver/register-driver.module'; // Asegúrate de que esté importado aquí
+import { FindRidePage } from './find-ride/find-ride.page';  // Asegúrate de que esté declarado aquí
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { RegisterDriverPageModule } from './register-driver/register-driver.modu
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
+    ReactiveFormsModule,
     RegisterDriverPageModule 
     // Otros módulos
   ],
