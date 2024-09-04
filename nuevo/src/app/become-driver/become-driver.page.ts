@@ -11,8 +11,7 @@ export class BecomeDriverPage {
   constructor(private navCtrl: NavController) { }
 
   openRegistrationForm() {
-    // Redirige al usuario al formulario de registro (puede ser una URL externa o una página dentro de la app)
-    window.open('https://www.uber.com/signup/driver/', '_blank');
+    this.navCtrl.navigateForward('/register-driver');
   }
 
   viewRequirements() {

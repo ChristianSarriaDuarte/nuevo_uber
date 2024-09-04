@@ -41,6 +41,10 @@ const routes: Routes = [
     path: 'find-ride',
     loadChildren: () => import('./find-ride/find-ride.module').then( m => m.FindRidePageModule)
   },
+  {
+    path: 'register-driver',
+    loadChildren: () => import('./register-driver/register-driver.module').then( m => m.RegisterDriverPageModule)
+  },
   
   
   

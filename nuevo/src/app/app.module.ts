@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms'; // Importa ReactiveFormsModule
+import { RegisterDriverPageModule } from './register-driver/register-driver.module'; // Asegúrate de que esté importado aquí
 
 @NgModule({
   declarations: [
@@ -16,7 +18,13 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent,
     // otros componentes
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    RegisterDriverPageModule 
+    // Otros módulos
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
