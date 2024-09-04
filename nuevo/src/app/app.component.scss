@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+  }
+  
+  ion-content {
+    flex: 1; /* Ocupa el espacio disponible, permitiendo que el footer quede en la parte inferior */
+  }
+  

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules,RouterModule, Routes } from '@angular/router';
 
 
+
 const routes: Routes = [
   {
     path: '',
@@ -27,7 +28,10 @@ const routes: Routes = [
   {
     path: 'uber-front',
     loadChildren: () => import('./uber-front/uber-front.module').then( m => m.UberFrontPageModule)
-  }
+  },
+  
+  
+  
 ];
 
 @NgModule({

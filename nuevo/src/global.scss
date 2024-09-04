@@ -35,3 +35,12 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+html, body {
+    height: 100%; /* Asegura que el html y el body ocupen toda la altura */
+    margin: 0; /* Elimina los márgenes por defecto */
+  }
+  
+  ion-app {
+    height: 100%; /* Asegura que la aplicación ocupe toda la altura */
+  }
+  

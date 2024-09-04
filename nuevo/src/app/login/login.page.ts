@@ -12,6 +12,7 @@ export class LoginPage {
 
   login() {
     // Aquí va la lógica para iniciar sesión
+    this.router.navigate(['/uber-front']); // Redirige a la página principal
   }
 
   navigateToRegister() {

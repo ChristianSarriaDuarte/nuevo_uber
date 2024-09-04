@@ -1,5 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>App Title</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> <!-- Icono para desplegar el menú -->
+    </ion-buttons>
+    <ion-title>
+      <img src="/assets/images/logo.png" alt="App Logo" class="logo"> <!-- Logo de la app -->
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon> <!-- Icono de notificaciones -->
+      </ion-button>
+      <ion-button>
+        <ion-icon name="person-outline"></ion-icon> <!-- Icono de perfil -->
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
