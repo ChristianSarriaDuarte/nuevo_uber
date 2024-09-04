@@ -1,40 +1,39 @@
-/* Fondo general */
-ion-content {
-    --background: #f5f5f5; /* Color de fondo claro */
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ocupa toda la altura disponible */
-    padding: 20px; /* Agrega un margen interno */
+/* src/app/uber-front/uber-front.page.scss */
+
+.container {
+    text-align: center;
+    padding: 16px;
   }
   
   h1 {
-    color: #000000; /* Color de texto similar a Uber */
-    font-size: 2rem; /* Tamaño de fuente grande */
-    text-align: center;
-    margin-bottom: 10px;
+    color: #000;
+    font-size: 2em;
+    margin-bottom: 16px;
   }
   
   p {
-    color: #333333; /* Color de texto secundario */
-    font-size: 1.2rem; /* Tamaño de fuente más pequeño */
-    text-align: center;
+    color: #333;
+    font-size: 1.2em;
   }
   
-  ion-header {
-    --background: #000000; /* Color de fondo negro para el encabezado */
-    --color: #ffffff; /* Color de texto blanco */
+  .uber-logo {
+    max-width: 80%;
+    height: auto;
+    margin: 20px 0;
   }
   
-  ion-toolbar {
-    --background: #000000; /* Color de fondo negro para la barra de herramientas */
+  .uber-gif {
+    margin: 20px 0;
   }
   
-  ion-title {
-    color: #ffffff; /* Color de texto blanco para el título */
+  .info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info h2 {
+    color: #007bff; /* Color similar al de Uber */
   }
   

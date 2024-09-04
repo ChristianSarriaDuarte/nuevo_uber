@@ -13,4 +13,19 @@ ion-header {
   ion-icon {
     color: #fff; // Color blanco para los iconos
   }
+  /* src/app/notifications/notifications.page.scss */
+
+/* src/app/notifications/notifications.page.scss */
+
+.uber-logo {
+    width: 50px; /* Ajusta el tamaño del logo a 50 píxeles de ancho */
+    height: 50px; /* Ajusta el tamaño del logo a 50 píxeles de alto para hacerlo cuadrado */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+    border-radius: 50%; /* Hace que la imagen tenga bordes redondeados, si quieres una imagen circular */
+    display: block; /* Asegura que la imagen se muestre como un bloque */
+    margin: 0 auto; /* Centra la imagen horizontalmente si es necesario */
+  }
   
+  ion-menu-button {
+    color: var(--ion-color-primary); /* Asegura que el color del botón sea visible */
+  }
