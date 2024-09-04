@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register-driver',
@@ -7,21 +8,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register-driver.page.scss'],
 })
 export class RegisterDriverPage implements OnInit {
-  registerForm: FormGroup = this.formBuilder.group({});  // Inicializa con un grupo vacío
+  registerForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private fb: FormBuilder, private navCtrl: NavController) {}
 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
+    this.registerForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required]
+      phone: ['', Validators.required],
+      licenseNumber: ['', Validators.required],
+      licenseType: ['', Validators.required],
+      birthdate: ['', Validators.required],
+      confirm: [false, Validators.requiredTrue]
     });
   }
 
   onSubmit() {
     if (this.registerForm.valid) {
-      // Manejo de datos del formulario
+      console.log(this.registerForm.value);
+    } else {
+      console.log('Formulario no válido');
     }
   }
 }

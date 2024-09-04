@@ -1,7 +1,18 @@
+
+  
+  ion-toolbar {
+    --height: 30px; /* Altura mínima del toolbar dentro del footer */
+    --padding-start: 8px; /* Ajusta el padding si es necesario */
+    --padding-end: 8px; /* Ajusta el padding si es necesario */
+  }
+  
+  ion-title {
+    font-size: 12px; /* Tamaño de la fuente del título en el footer */
+  }
+  /* styles.scss */
 ion-footer {
-    --background: #000; /* Fondo oscuro */
-    --color: #fff; /* Texto blanco */
-    text-align: center;
-    padding: 10px;
+    height: auto; /* Ajusta la altura automáticamente */
+    padding: 0; /* Reduce el padding */
+    margin: 0; /* Elimina el margen si es necesario */
   }
   
