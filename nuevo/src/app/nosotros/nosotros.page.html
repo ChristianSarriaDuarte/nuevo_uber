@@ -1,22 +1,37 @@
-<ion-card>
-  <ion-card-header>
-    <ion-card-title>Contacto</ion-card-title>
-  </ion-card-header>
-  <ion-card-content>
-    <form>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Contacto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="contact-content">
+  <div class="contact-form-container">
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
       <ion-item>
         <ion-label position="floating">Nombre</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" name="name" ngModel required></ion-input>
+        <div *ngIf="contactForm.submitted && !contactForm.controls['name']?.valid" class="error-message">
+          El nombre es obligatorio.
+        </div>
       </ion-item>
+
       <ion-item>
-        <ion-label position="floating">Correo Electrónico</ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" name="email" ngModel required email></ion-input>
+        <div *ngIf="contactForm.submitted && !contactForm.controls['email']?.valid" class="error-message">
+          Se requiere un email válido.
+        </div>
       </ion-item>
+
       <ion-item>
         <ion-label position="floating">Mensaje</ion-label>
-        <ion-textarea></ion-textarea>
+        <ion-textarea name="message" ngModel required></ion-textarea>
+        <div *ngIf="contactForm.submitted && !contactForm.controls['message']?.valid" class="error-message">
+          El mensaje es obligatorio.
+        </div>
       </ion-item>
-      <ion-button expand="full" type="submit">Enviar</ion-button>
+
+      <ion-button expand="full" type="submit" class="submit-button">Enviar</ion-button>
     </form>
-  </ion-card-content>
-</ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,28 @@
+.contact-content {
+    --background: url('/assets/imagenes/uber-background.jpg'); /* Fondo de Uber */
+    --background-size: cover;
+    --background-blur: 8px; /* Difuminado del fondo */
+  }
+  
+  .contact-form-container {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  ion-item {
+    margin-bottom: 15px;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9em;
+  }
+  
+  .submit-button {
+    background: #1a1a1a; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+  }
+  
