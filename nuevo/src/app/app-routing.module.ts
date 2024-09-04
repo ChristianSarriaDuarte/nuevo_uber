@@ -33,6 +33,14 @@ const routes: Routes = [
     path: 'nosotros',
     loadChildren: () => import('./nosotros/nosotros.module').then( m => m.NosotrosPageModule)
   },
+  {
+    path: 'become-driver',
+    loadChildren: () => import('./become-driver/become-driver.module').then( m => m.BecomeDriverPageModule)
+  },
+  {
+    path: 'find-ride',
+    loadChildren: () => import('./find-ride/find-ride.module').then( m => m.FindRidePageModule)
+  },
   
   
   

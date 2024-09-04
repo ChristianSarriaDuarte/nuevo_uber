@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Convertirse en Conductor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="content">
+    <h2>¡Únete a nuestro equipo de conductores!</h2>
+    <p>Convertirse en conductor de Uber es fácil y rápido. Aquí te mostramos los pasos a seguir para comenzar.</p>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>¿Cómo Convertirse en Conductor?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ol>
+          <li>
+            <strong>Regístrate:</strong> Completa el formulario de inscripción en línea para iniciar el proceso.
+            <ion-button expand="full" color="primary" (click)="openRegistrationForm()">Regístrate Ahora</ion-button>
+          </li>
+          <li>
+            <strong>Requisitos:</strong> Asegúrate de cumplir con los requisitos necesarios, como tener un vehículo adecuado y una licencia de conducir válida.
+            <ion-button expand="full" color="secondary" (click)="viewRequirements()">Ver Requisitos</ion-button>
+          </li>
+          <li>
+            <strong>Documentación:</strong> Sube los documentos necesarios para completar tu perfil.
+            <ion-button expand="full" color="tertiary" (click)="uploadDocuments()">Sube Documentos</ion-button>
+          </li>
+          <li>
+            <strong>Capacitación:</strong> Participa en la capacitación para conocer todo lo que necesitas saber para ser un conductor exitoso.
+            <ion-button expand="full" color="success" (click)="viewTraining()">Ver Capacitación</ion-button>
+          </li>
+        </ol>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Beneficios de Ser Conductor</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ul>
+          <li>Flexibilidad de horarios: Trabaja cuando quieras.</li>
+          <li>Ganancias adicionales: Incrementa tus ingresos con cada viaje.</li>
+          <li>Soporte continuo: Contamos con un equipo de soporte dedicado.</li>
+          <li>Oportunidades de bonificaciones: Gana más con promociones y bonificaciones.</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>¿Necesitas Más Información?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Si tienes alguna duda o necesitas más información, no dudes en contactarnos.</p>
+        <ion-button expand="full" color="warning" (click)="contactUs()">Contáctanos</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
