@@ -29,6 +29,10 @@ const routes: Routes = [
     path: 'uber-front',
     loadChildren: () => import('./uber-front/uber-front.module').then( m => m.UberFrontPageModule)
   },
+  {
+    path: 'nosotros',
+    loadChildren: () => import('./nosotros/nosotros.module').then( m => m.NosotrosPageModule)
+  },
   
   
   

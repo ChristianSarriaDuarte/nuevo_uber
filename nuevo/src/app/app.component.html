@@ -1,4 +1,5 @@
 <app-header></app-header> <!-- Header constante -->
+<!-- app.component.html -->
 <ion-menu side="start" menuId="first" contentId="main-content">
   <ion-header>
     <ion-toolbar>
@@ -6,15 +7,17 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <!-- Aquí van los ítems del menú -->
     <ion-list>
-      <ion-item routerLink="/home">Home</ion-item>
-      <ion-item routerLink="/notifications">Notifications</ion-item>
+      <ion-item routerLink="/uber-front">Home</ion-item>
+      <ion-item routerLink="/nosotros">Contactanos</ion-item>
     </ion-list>
   </ion-content>
 </ion-menu>
 
-<ion-router-outlet id="main-content"></ion-router-outlet>
+<ion-app>
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+</ion-app>
+
 <ion-content>
   <router-outlet></router-outlet> <!-- Aquí se cargan las diferentes páginas -->
 </ion-content>
