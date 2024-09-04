@@ -1,72 +1,57 @@
-.search-container {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  ion-item {
-    --padding-start: 0;
-    --inner-padding-end: 0;
-    --highlight-color: var(--ion-color-primary);
-  }
-  
-  ion-label {
-    color: var(--ion-color-dark);
-  }
-  
-  ion-icon {
-    color: var(--ion-color-primary);
-  }
-  
-  ion-button {
-    --background: var(--ion-color-primary);
-    --color: #fff;
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  .search-container {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  ion-item {
-    --padding-start: 0;
-    --inner-padding-end: 0;
-    --highlight-color: var(--ion-color-primary);
-  }
-  
-  ion-label {
-    color: var(--ion-color-dark);
-  }
-  
-  ion-icon {
-    color: var(--ion-color-primary);
-  }
-  
-  ion-button {
-    --background: var(--ion-color-primary);
-    --color: #fff;
-    border-radius: 20px;
-    font-weight: bold;
-  }
-  
-  
-  .car-list {
-    padding: 16px;
-  }
-  
-  .car {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 16px;
-    background-color: #f9f9f9;
-  }
-  #map {
-    height: 400px; /* Ajusta según tu diseño */
-    width: 100%;
-  }
-  
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 500px; /* Limit the width of the form */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-item {
+  margin-bottom: 15px;
+}
+
+.vehicle-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.vehicle-selection ion-card {
+  flex: 1;
+  margin: 0 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.vehicle-selection ion-card.selected {
+  border-color: #3880ff; /* Highlight color when selected */
+}
+
+.vehicle-selection ion-card ion-card-content {
+  text-align: center;
+}
+
+.submit-button {
+  margin-top: 20px;
+}
+
+.map-container {
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -4,19 +4,38 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <form (ngSubmit)="onSubmit()">
-    <ion-item>
-      <ion-label position="floating">Origen</ion-label>
-      <ion-input placeholder="Introduce el origen"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Destino</ion-label>
-      <ion-input placeholder="Introduce el destino"></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit">Buscar</ion-button>
-  </form>
+<ion-content>
+  <div class="content-wrapper">
+    <form (ngSubmit)="onSubmit()" class="form-wrapper">
+      <ion-item class="input-item">
+        <ion-label position="floating"></ion-label>
+        <ion-input placeholder="Introduce el origen"></ion-input>
+      </ion-item>
+      <ion-item class="input-item">
+        <ion-label position="floating"></ion-label>
+        <ion-input placeholder="Introduce el destino"></ion-input>
+      </ion-item>
 
-  <!-- Map Container -->
-  <div id="map" style="height: 400px; width: 100%;"></div> <!-- Ensure map container has height -->
+      <!-- Vehicle Selection Cards -->
+      <div class="vehicle-selection">
+        <ion-card 
+          *ngFor="let vehicle of vehicles"
+          [class.selected]="selectedVehicle === vehicle"
+          (click)="selectVehicle(vehicle)">
+          <ion-card-header>
+            <ion-card-title>{{ vehicle.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{ vehicle.description }}</p>
+            <p>⭐ {{ vehicle.rating }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <ion-button expand="block" type="submit" class="submit-button">Buscar</ion-button>
+    </form>
+
+    <!-- Map Container -->
+    <div id="map" class="map-container"></div>
+  </div>
 </ion-content>
