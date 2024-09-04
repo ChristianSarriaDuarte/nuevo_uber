@@ -4,11 +4,11 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Uber Duoc UC Vespucio</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div *ngIf="showOffer" class="offer-popup" id="offer-banner">
+    <p>¡Oferta especial para ti!</p>
+    <ion-button (click)="claimOffer()">Reclamar</ion-button>
+    <ion-icon name="close-circle" (click)="closeOffer()"></ion-icon>
+  </div>
   <div class="container">
     <h1>Bienvenido a Uber Duoc UC Vespucio</h1>
     <p>¡Explora la mejor manera de moverte !</p>
@@ -54,7 +54,6 @@
     </ion-card>
   </div>
 </div>
-
 </ion-content>
 
 

@@ -36,4 +36,63 @@
   .info h2 {
     color: #007bff; /* Color similar al de Uber */
   }
+  .offer-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+    width: 80%; /* Ajusta el ancho del popup si es necesario */
+    max-width: 400px; /* Establece un ancho máximo si es necesario */
+  }
+  
+  .offer-popup p {
+    margin: 0 0 10px;
+  }
+  
+  .offer-popup ion-icon {
+    font-size: 24px;
+    color: #d9534f; /* Color rojo para el icono de cerrar */
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .offer-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #ff6f61; /* Color llamativo para el título */
+  }
+  
+  .offer-content p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
   
