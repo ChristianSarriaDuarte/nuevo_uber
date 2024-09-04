@@ -1,29 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/uber-front"></ion-back-button> <!-- Botón de regreso -->
-    </ion-buttons>
     <ion-title>Buscar Viaje</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <form [formGroup]="findRideForm" (ngSubmit)="onSubmit()">
-    <ion-item>
-      <ion-icon name="location-outline" slot="start"></ion-icon>
-      <ion-label position="floating">Origen</ion-label>
-      <ion-input formControlName="origin" placeholder="Introduce el origen"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="location-outline" slot="start"></ion-icon>
-      <ion-label position="floating">Destino</ion-label>
-      <ion-input formControlName="destination" placeholder="Introduce el destino"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-icon name="cash-outline" slot="start"></ion-icon>
-      <ion-label position="floating">Precio (opcional)</ion-label>
-      <ion-input formControlName="price" placeholder="Introduce el precio (opcional)"></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit">Buscar</ion-button>
-  </form>
+  <div class="search-container">
+    <form [formGroup]="findRideForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-icon name="location-outline" slot="start"></ion-icon>
+        <ion-label position="floating"></ion-label>
+        <ion-input formControlName="origin" placeholder="Introduce el origen"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="location-outline" slot="start"></ion-icon>
+        <ion-label position="floating"></ion-label>
+        <ion-input formControlName="destination" placeholder="Introduce el destino"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="cash-outline" slot="start"></ion-icon>
+        <ion-label position="floating"></ion-label>
+        <ion-input formControlName="price" placeholder="Introduce el precio (opcional)"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" type="submit" shape="round" color="primary">
+        Buscar
+      </ion-button>
+    </form>
+  </div>
 </ion-content>

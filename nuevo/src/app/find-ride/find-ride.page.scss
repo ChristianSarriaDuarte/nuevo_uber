@@ -1,26 +1,28 @@
-ion-content {
-    --padding-start: 16px;
-    --padding-end: 16px;
-    --padding-top: 16px;
-    --padding-bottom: 16px;
+.search-container {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
   
-  ion-button {
-    margin-top: 16px;
-  }
   ion-item {
-    margin-bottom: 16px;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --highlight-color: var(--ion-color-primary);
+  }
+  
+  ion-label {
+    color: var(--ion-color-dark);
   }
   
   ion-icon {
-    color: #333;
-  }
-  
-  ion-input, ion-datetime {
-    --padding-start: 0;
+    color: var(--ion-color-primary);
   }
   
   ion-button {
-    margin-top: 16px;
+    --background: var(--ion-color-primary);
+    --color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
   }
   
