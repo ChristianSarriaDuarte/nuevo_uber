@@ -9,6 +9,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@angular/fire": "^18.0.1",
+    "firebase": "^10.14.1",
     "package.json": "^2.0.1"
   }
 }
